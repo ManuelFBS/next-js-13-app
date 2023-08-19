@@ -11,7 +11,7 @@ export const metadata = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="en">
+    <html lang="es">
       {/* <head>My first App with Next 13</head> */}
       <body className={inter.className}>
         <Navigation />
