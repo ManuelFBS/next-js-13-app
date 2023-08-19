@@ -12,6 +12,10 @@ export default function Navigation() {
       route: "/dashboard",
     },
     {
+      label: "Posts",
+      route: "/posts",
+    },
+    {
       label: "About",
       route: "/about",
     },
