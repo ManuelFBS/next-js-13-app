@@ -8,6 +8,10 @@ export default function Navigation() {
       route: "/",
     },
     {
+      label: "Dashboard",
+      route: "/dashboard",
+    },
+    {
       label: "About",
       route: "/about",
     },
