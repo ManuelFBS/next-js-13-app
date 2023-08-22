@@ -1,19 +1,19 @@
-import LikeButton from "./LikeButton";
+import LikeButton from './LikeButton'
 
 const fetchPosts = () => {
-  return fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
+  return fetch('https://jsonplaceholder.typicode.com/posts').then((res) =>
     res.json()
-  );
-};
+  )
+}
 
-export default async function ListOfPosts({ params }) {
-  const posts = await fetchPosts();
+export default async function ListOfPosts ({ params }) {
+  const posts = await fetchPosts()
 
   return posts.slice(0, 5).map((post) => (
     <article key={post.id}>
-      <h2 style={{ color: "#09f" }}>{post.title}</h2>
+      <h2 style={{ color: '#09f' }}>{post.title}</h2>
       <p>{post.body}</p>
       <LikeButton id={post.id} />
     </article>
-  ));
+  ))
 }

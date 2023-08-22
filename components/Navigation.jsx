@@ -1,25 +1,25 @@
-import Link from "next/link";
-import styles from "./Navigation.module.css";
+import Link from 'next/link'
+import styles from './Navigation.module.css'
 
-export default function Navigation() {
+export default function Navigation () {
   const links = [
     {
-      label: "Home",
-      route: "/",
+      label: 'Home',
+      route: '/'
     },
     {
-      label: "Dashboard",
-      route: "/dashboard",
+      label: 'Dashboard',
+      route: '/dashboard'
     },
     {
-      label: "Posts",
-      route: "/posts",
+      label: 'Posts',
+      route: '/posts'
     },
     {
-      label: "About",
-      route: "/about",
-    },
-  ];
+      label: 'About',
+      route: '/about'
+    }
+  ]
 
   return (
     <header className={styles.header}>
@@ -33,5 +33,5 @@ export default function Navigation() {
         </ul>
       </nav>
     </header>
-  );
+  )
 }
