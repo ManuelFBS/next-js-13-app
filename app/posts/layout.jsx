@@ -1,9 +1,10 @@
-import { Counter } from './Counter'
+// import { Counter } from './Counter'
 
 const PostsLayout = ({ children }) => {
   return (
     <div>
-      <Counter />
+      {/* <Counter /> */}
+      <small>Home &bull; Posts</small>
       {children}
     </div>
   )
