@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from 'next/link'
 
 const fetchSinglePost = (id) => {
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
