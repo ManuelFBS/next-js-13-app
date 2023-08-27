@@ -1,8 +1,12 @@
 import '../styles/globals.css'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
+import { Space_Grotesk } from '@next/font/google'
 import Navigation from '../components/Navigation'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
+const font = Space_Grotesk({
+  weight: ['400', '700']
+})
 
 export const metadata = {
   title: 'My first App with Next 13',
@@ -12,8 +16,8 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang='es'>
-      {/* <head>My first App with Next 13</head> */}
-      <body className={inter.className}>
+      {/* <body className={inter.className}> */}
+      <body className={font.className}>
         <Navigation />
         {children}
       </body>
