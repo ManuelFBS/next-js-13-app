@@ -1,13 +1,21 @@
 const fetchComments = async (id) => {
   await new Promise(resolve => setTimeout(resolve, 2000))
-  throw new Error('Error al cargar los comentarios')
+  
+  /* La línea `throw new Error('Error al cargar los comentarios')` arroja un error con el mensaje
+  'Error al cargar los comentarios'. Esto significa que si la función `fetchComments` encuentra esta
+  línea, dejará de ejecutarse inmediatamente y arrojará un error. */
+  // throw new Error('Error al cargar los comentarios')
 
-  // return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
-  //   next: {
-  //     revalidate: 60
-  //   }
-  // })
-  //   .then(res => res.json())
+  /* La línea `return fetch(`https://jsonplaceholder.typicode.com/posts//comments`, {next: {
+  revalidate: 60 } })` está realizando una solicitud GET a la URL especificada (`https
+  ://jsonplaceholder.typicode.com/posts//comments`) para recuperar los comentarios de una
+  publicación específica. */
+  return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
+    next: {
+      revalidate: 60
+    }
+  })
+    .then(res => res.json())
 }
 
 export default async function Post ({ params }) {
