@@ -14,7 +14,8 @@ const RootLayout = ({ children }) => {
   return (
     <html lang='es'>
       {/* <body className={inter.className}> */}
-      <body className={font.className}>
+      {/* <body className={font.className}> */}
+      <body className={font.variable}>
         <Navigation />
         {children}
       </body>
