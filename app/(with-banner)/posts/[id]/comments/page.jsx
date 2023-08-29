@@ -1,6 +1,6 @@
 const fetchComments = async (id) => {
   await new Promise(resolve => setTimeout(resolve, 2000))
-  
+
   /* La línea `throw new Error('Error al cargar los comentarios')` arroja un error con el mensaje
   'Error al cargar los comentarios'. Esto significa que si la función `fetchComments` encuentra esta
   línea, dejará de ejecutarse inmediatamente y arrojará un error. */
@@ -26,7 +26,9 @@ export default async function Post ({ params }) {
     <ul style={{ background: '#444', fontSize: '12px' }}>
       {comments.map(comment => (
         <li key={comment.id}>
-          <img alt={comment.name} src={`https://api.dicebear.com/7.x/adventurer/svg?seed=Midnight/${comment.email}`} />
+          <picture>
+            <img alt={comment.name} src={`https://api.dicebear.com/7.x/adventurer/svg?seed=Midnight/${comment.email}`} />
+          </picture>
           <h4>{comment.name}</h4>
           <small>{comment.body}</small>
         </li>
