@@ -1,11 +1,17 @@
 import '../styles/globals.css'
 // import { Inter } from 'next/font/google'
-import { Space_Grotesk } from '@next/font/google'
+// import { Space_Grotesk } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import Navigation from '../components/Navigation'
 
 // const inter = Inter({ subsets: ['latin'] })
-const font = Space_Grotesk({
-  weight: ['400', '700']
+// const font = Space_Grotesk({
+//   weight: ['400', '700'],
+//   subsets: ['latin']
+// })
+const font = Roboto({
+  weight: ['400', '700'],
+  subsets: ['latin']
 })
 
 export const metadata = {
