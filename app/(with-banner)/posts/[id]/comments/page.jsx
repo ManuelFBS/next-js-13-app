@@ -18,6 +18,9 @@ const fetchComments = async (id) => {
     .then(res => res.json())
 }
 
+/* La `exportación de la función asíncrona predeterminada Post ({ params })` es una exportación
+predeterminada de una función asincrónica llamada `Post`. Esta función toma un objeto como argumento
+con una propiedad `params`. Dentro de la función, extrae la propiedad `id` del objeto `params`. */
 export default async function Post ({ params }) {
   const { id } = params
   const comments = await fetchComments(id)
