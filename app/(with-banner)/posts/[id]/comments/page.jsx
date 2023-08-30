@@ -27,7 +27,7 @@ export default async function Post ({ params }) {
       {comments.map(comment => (
         <li key={comment.id}>
           <picture>
-            <img alt={comment.name} src={`https://api.dicebear.com/7.x/adventurer/svg?seed=Midnight/${comment.email}`} />
+            <img width='50px' height='50px' alt={comment.name} src={`https://api.dicebear.com/7.x/adventurer/svg?seed=Midnight/${comment.email}`} />
           </picture>
           <h4>{comment.name}</h4>
           <small>{comment.body}</small>
